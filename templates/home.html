@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  
+  <title>
+    JobsnMore
+  </title>
+  <style media="screen">
+    .main{
+      background-color:#5A3E81;
+      align-content:center;
+    }
+    .main2{
+      width:95%;
+    }
+    .bigtitle{
+      font-family:Lucida Console;
+      color:#5A3E81;
+      padding:50px;
+      background-color:white;
+      margin:0px;
+      
+    }
+    .img1{
+      width:100%;
+      /* amxheight:10%; */
+      /* max-height:10%; */
+      height:352px;
+      object-fit:cover;
+    }
+    .aboutuspara{
+      padding-bottom:20px;
+      padding-left:20px;
+      padding-right:20px;
+      font-family:Lucida Console;
+      background-color:white;
+    }
+    .a1{
+      width:50%;
+      align-content:center;
+      background-color:white;
+    }
+    .a1outer{
+      background-color:white;
+    }
+    /* .img{
+      width:100%;
+    } */
+    .job{
+      font-family:Lucida Console;
+      font-size:21px;
+    }
+    #entry{
+      font-family:Lucida Console;
+      font-size:21px;
+      text-align:left;
+      padding:15px;
+    }
+    #entry:hover{
+      background-color:#ECE8F1;
+      border-block:activeborder;
+      font-family:Lucida Console;
+      font-size:24px;
+      transition:0.3s;
+      padding:15px;
+    }
+  </style>
+  
+</head>  
+<body><div class="main" align="center"><div class="main2">
+ <h1 align="center" class="bigtitle">Hello Job Seekers !</h1>
+  
+  <img  class="img1" src="static/30440554.jpg">
+  
+  <div align="center" class="a1outer">
+  <div class="a1">
+    <h1 class="bigtitle">About Us </h1>
+  <p  class="aboutuspara">we as a team tend to provide the aspirants guidance through which they achieve what they want to become and help them discover their niche</p>
+  <h1 class="bigtitle">Openings</h1>
+    <p class="job">
+    <!-- this is accessed from app.py Job variable/identifier -->
+       <!-- this part of html can be cropped n put in separate html file nd then it can be included by- include newfilehtml -->
+      {%for job in jobs%}<div id="entry" class="row">
+        <div class="col-9">
+      <h2>{{job["title"]}}</h2>
+      SALARY : {{job["sal"]}}<br>
+      EXPERIENCE : {{job["exp"]}}
+      <br>
+        </div>
+        <div class="col-3"><br><br>
+        <button type="button" class="btn btn-outline-info">Apply</button> 
+        
+        </div>
+      </div>
+      {%endfor%}
+    
+    </p>
+    
+  
+  </div></div>
+  
+
+  
+</div></div>
+</body>
+</html>
