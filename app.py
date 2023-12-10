@@ -8,21 +8,24 @@ Job=[
     "title":"Data Analyst",
     "loc": "banglore" ,
     "sal": "12,00,000",
-    "exp": "minimum 1 year"
+    "exp": "minimum 1 year",
+    "mail":"palakjain2002@gmail.com"
   },
   {
     "id": 5610,
     "title": "Data Scientist",
     "loc": "delhi",
     "sal": "15,00,000",
-    "exp": "minimum 2 years"
+    "exp": "minimum 2 years",
+    "mail":"palakjain2002@gmail.com"
   },
   {
     "id": 5607,
     "title": "Associate Software Engineer",
     "loc": "noida",
     "sal": "8,00,000",
-    "exp": "none"
+    "exp": "none",
+    "mail":"palakjain2002@gmail.com"
   }
   
 ]

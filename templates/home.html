@@ -69,10 +69,24 @@
       transition:0.3s;
       padding:15px;
     }
+    #n{
+      background-color:#D0E2EA;
+      
+    }
+    #head{
+      /* background-color:#ECE8F1; */
+      font-family:Lucida Console;
+      font-size:18px;
+      padding:8px;
+      color:#5A3E81;
+    }
+   
   </style>
   
 </head>  
-<body><div class="main" align="center"><div class="main2">
+<body>
+  {% include "head.html" %}
+  <div class="main" align="center"><div class="main2"><br><br><br><br><br>
  <h1 align="center" class="bigtitle">Hello Job Seekers !</h1>
   
   <img  class="img1" src="static/30440554.jpg">
@@ -93,7 +107,7 @@
       <br>
         </div>
         <div class="col-3"><br><br>
-        <button type="button" class="btn btn-outline-info">Apply</button> 
+        <a href="mailto:{{jobs['mail']}}?subject= Application for {{jobs['title']}}&body=My%20Resume%3A%0D%0AMy%20Cover%20Letter%3A%0D%0AMy%20projects%3A" type="button" class="btn btn-outline-info">Apply</a> 
         
         </div>
       </div>
